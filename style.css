@@ -1,0 +1,236 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #212430;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Red Hat Display", sans-serif;
+
+}
+.container{
+  width: 80rem;
+  border: 1px solid red;
+  height: 100rem;
+}
+header{
+  width: 100%;
+  height: 3.19rem;
+  border: 1px solid red;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 44.32rem;
+}
+ul{
+  width: 28.31rem;
+  height: 1.94rem;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1.6rem;
+  list-style: none;
+
+    & button{
+      color: #203800;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+      border-radius: 12px;
+      background: #8FFF00;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+      border: none;
+
+      display: flex;
+      padding: 5px 15px;
+      justify-content: center;
+      align-items: center;
+  }
+}
+ul li a{
+  text-decoration: none;
+  color: #FFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  & ul li a:active{
+    color: #8FFF00;
+  }
+}
+.social-header{
+  width: 100%;
+  height: 5.6rem;
+  border: 1px solid red;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  gap: 1.6rem;
+  padding-right: 1rem;
+}
+.about{
+  background: linear-gradient(180deg, #2F3651 0%, #363C57 51.56%, #2F3653 100%);
+  width: 100%;
+  height: 20.62rem;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: #FFF;
+
+}
+
+.about-right{
+  width: 58.75rem;
+  height: 20.43rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 25px 50px;
+
+
+  border: 1px solid red;
+
+}
+.location{
+  height: 2.75rem;
+  width: 100%;
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  align-self: stretch;
+  color: #747DA4;
+   border: 1px solid red;
+
+    & p{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-direction: row;
+      gap: 10px;
+    }
+}
+.social-location{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: .4rem;
+}
+.about-text{
+    width: 100%;
+
+  border: 1px solid red;
+  display: flex;
+      align-items: start;
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: 10px;
+
+
+}
+.contact{
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    gap:10px;
+    border: 1px solid red;
+    width: 100%;
+  
+  & p{
+    display: flex;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+
+    border-radius: 4px;
+    background: #454F76;
+
+    color: #8B95BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+.lol{
+  display: flex;
+  width: 78px;
+  height: 32px;
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 4px;
+  background: #454F76;
+}
+.valorant{
+  display: flex;
+  width: 52.25px;
+  height: 32px;
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 4px;
+  background: #8FFF00;
+}
+.about-data{
+  display: flex;
+  padding: 20px 10px 10px 10px;
+  align-items: center;
+  gap: 50px;
+  align-self: stretch;
+  border: 1px solid red;
+
+  & .data-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+
+    & h1{
+      color: #FFF;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%; /* 48px */
+
+    }
+    & p{
+      color: #747DA4;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%; /* 16px */
+    }
+
+    
+  }
+
+
+}
+
