@@ -1,0 +1,106 @@
+:root {
+    --bg-dark: #12131b;
+    --card-bg: #333A56;
+    --razer-green: #44ff00;
+    --text-gray: #747DA4;
+    --white: #ffffff;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 15px;
+}
+
+/* Estrutura do Card */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    display: flex;
+    overflow: hidden;
+    height: 160px;
+    transition: transform 0.2s;
+    border: 1px solid red;
+}
+
+.card-img {
+    flex: 0 0 40%;
+    background-size: cover;
+    background-position: center;
+    background-color: #000; /* Fallback */
+}
+
+.card-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Tipografia interna */
+.category {
+    color: var(--text-gray);
+    font-weight: 700;
+    font-size: 0.87rem;
+    margin-bottom: 8px;
+}
+
+.product-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    color: #FFF;
+    font-size: 0.87rem;
+}
+
+.product-name span {
+    color: var(--razer-green);
+    font-weight: 800;
+
+}
+
+.view-more {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;    
+}
+
+/* Estilo para o card Verde (Destaque) */
+.card.active {
+    background-color: var(--razer-green);
+}
+
+.card.active .category,
+.card.active .view-more {
+    color: #000000;
+    opacity: 0.7;
+}
+
+.card.active .product-name {
+    color: #000000;
+}
+
+.card.active .product-name span {
+    color: #000000;
+    font-weight: 800;
+}
+
+/* Responsividade simples */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
