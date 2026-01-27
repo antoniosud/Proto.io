@@ -11,3 +11,8 @@ body{
   font-family: "Red Hat Display", sans-serif;
 
 }
+.container{
+  width: 80rem;
+  border: 1px solid red;
+  height: 405.125rem;
+}

@@ -1,0 +1,106 @@
+.store-container {
+    width: 100%;
+    height: 33.54rem;
+    margin: 0 auto;
+    
+}
+
+.store-title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    color: #FFF;
+    font-weight: 700;
+}
+
+/* Grid de cards */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: .8rem;
+
+    
+}
+
+/* Estilo do Card */
+.store-card{
+    background-color: #23273a; 
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    height: 26.875rem;
+    border: 1px solid red;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image img {
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+    display: block;
+    overflow: hidden;
+
+}
+
+.card-body {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body h3 {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.card-body p {
+    width: 18.437rem;
+    height: 3.562rem;
+    color: #747DA4;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Rodapé do card (Botão e Preço) */
+.card-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-buy {
+    background-color: #8fff00; /* Verde limão característico */
+    color: #203800;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 0.85rem;
+    transition: background 0.3s;
+}
+
+.btn-buy:hover {
+    background-color: #8ce600;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #747DA4;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}

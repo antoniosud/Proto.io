@@ -1,0 +1,53 @@
+.razer{
+  width: 100%;
+  height: 16.875rem;
+  display: flex;
+  padding: 50px 0;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+  border: 1px solid red;
+  
+}
+.banner-razer{
+  width: 100%;
+  height: 10.625rem;
+  display: flex;
+  padding: 50px 0;
+  background: #111;
+  border-radius: 24px;  
+  border: 1px solid red;
+
+display: flex;
+padding: 50px;
+justify-content: space-between;
+align-items: center;
+flex: 1 0 0;
+}
+.razer-text{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 2rem;
+
+color: #FFF;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 100%;
+
+& h2{
+  color: #FFF;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 100%; /* 40px */
+}
+
+& span {
+    color: #8FFF00;
+    
+    font-weight: 800;
+    line-height: 100%; /* 24px */
+}
+}
