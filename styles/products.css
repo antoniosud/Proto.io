@@ -101,18 +101,20 @@
 }
 
 .generation-banner img {
-  margin-left: auto;
-  width: 500px;
-  height: 300px;
-  object-fit: contain;
-  transform: translateX(170px);
+  width: 420px;
+  height: 220px;
+  right: -20px;
+  bottom: 65px;
+  position: relative;
+
   transform: translateY(115px);
 }
 .banner-text {
   display: flex;
+  align-self: center;
   align-items: flex-start;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 10px;
 }
 .banner-text h1 {
