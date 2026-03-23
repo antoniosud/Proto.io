@@ -1,0 +1,276 @@
+/* 1. Reset & Base */
+:root {
+  --razer-green: #44d62c;
+  --dark-bg: #0a0a0a;
+  --card-bg: #111111;
+  --text-gray: #888888;
+  --transition-speed: 0.5s;
+}
+
+/* 2. Seção Carrocel */
+.carrocel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* 3. Janela de Visualização (Clip) */
+.carousel-track-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+/* 4. O Trilho (Onde os slides moram) */
+.carousel-track {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  transition: transform var(--transition-speed) ease-in-out;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 5. Estilo de cada Slide */
+.carousel-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+  background: var(--card-bg);
+  border-radius: 10px;
+}
+
+.carousel-slide img {
+  max-width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: contain;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+/* 6. Informações do Produto */
+.product-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: white;
+}
+
+.highlight {
+  color: var(--razer-green);
+}
+
+.product-info p {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+/* 7. CTA (Botão + Preço) */
+.cta-container {
+  display: inline-flex;
+  align-items: stretch;
+  background: #1a1a1a;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-main {
+  background-color: var(--razer-green);
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    filter 0.2s,
+    transform 0.1s;
+}
+
+.btn-main:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+.btn-main:active {
+  transform: scale(0.95);
+}
+
+.price-tag {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  background: #252525;
+  min-width: 100px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #666;
+  font-size: 0.7rem;
+}
+
+.new-price {
+  color: var(--razer-green);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* 8. Botões de Navegação */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--razer-green);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition:
+    background 0.3s,
+    transform 0.2s;
+}
+
+.nav-btn:hover {
+  background: rgba(68, 214, 44, 0.1);
+  border-color: var(--razer-green);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.nav-btn:active {
+  transform: translateY(-50%) scale(0.9);
+}
+
+.prev {
+  left: 20px;
+}
+.next {
+  right: 20px;
+}
+
+/* 9. Indicadores */
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.indicator.active {
+  background: var(--razer-green);
+}
+
+.indicator:hover {
+  background: rgba(68, 214, 44, 0.6);
+}
+
+/* 10. Ajuste Mobile */
+@media (max-width: 768px) {
+  .carrocel {
+    padding: 10px;
+  }
+
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .prev {
+    left: 10px;
+  }
+  .next {
+    right: 10px;
+  }
+
+  .carousel-slide {
+    padding: 20px;
+  }
+
+  .product-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .product-info p {
+    font-size: 0.8rem;
+  }
+
+  .btn-main {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+
+  .price-tag {
+    min-width: 80px;
+    padding: 0 10px;
+  }
+
+  .old-price {
+    font-size: 0.6rem;
+  }
+
+  .new-price {
+    font-size: 0.8rem;
+  }
+
+  .carousel-indicators {
+    bottom: 10px;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide img {
+    max-height: 250px;
+  }
+
+  .product-info h3 {
+    font-size: 1rem;
+  }
+
+  .nav-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+}
