@@ -4,19 +4,19 @@
   --dark-bg: #0a0a0a;
   --card-bg: #111111;
   --text-gray: #888888;
-  --transition-speed: 0.5s;
+  --transition-speed: 0.8s;
 }
 
 /* 2. Seção Carrocel */
 .carrocel {
   position: relative;
-  width: 100%;
-  max-width: 1200px;
+  width: 100%;  
   margin: 0 auto;
+  margin-top: 3.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  
 }
 
 /* 3. Janela de Visualização (Clip) */
@@ -189,7 +189,7 @@
   border: none;
   background: rgba(255, 255, 255, 0.3);
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.8s;
 }
 
 .indicator.active {
