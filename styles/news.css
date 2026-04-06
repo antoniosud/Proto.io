@@ -80,17 +80,17 @@
 .newsletter {
   height: 15.475rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 50px;
   justify-content: space-between;
   align-items: flex-start;
   flex: 1 0 0;
   border-radius: 12px;
   background: #8FFF00;
+  margin-top: 3.75rem;
 
   & img{
-    width: 48px;
-    height: 48px;
+    
     margin-right: 1px;
   }
 
