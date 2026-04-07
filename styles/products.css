@@ -92,7 +92,7 @@
   align-items: flex-end;
   justify-content: flex-start;
   flex-direction: row;
-  gap: 10rem;
+  gap: 4rem;
 
   background: #8fff00;
 
@@ -103,19 +103,22 @@
 .generation-banner img {
   width: 420px;
   height: 220px;
-  right: -20px;
+  right: -105px;
   bottom: 65px;
   position: relative;
 
   transform: translateY(115px);
 }
 .banner-text {
+  
   display: flex;
   align-self: center;
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+
+  border: 1px solid red;
 }
 .banner-text h1 {
   color: #000;

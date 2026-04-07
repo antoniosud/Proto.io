@@ -1,106 +1,157 @@
-.mouse{
+/* 1. Reset & Base */
+:root {
+  --razer-green: #44d62c;
+  --dark-bg: #111111;
+  --light-bg: #8FFF00;
+  --text-dark: #000000;
+  --text-light: #ffffff;
+  --text-muted: #254300;
+  --border-radius: 24px;
+  --gap-large: 2.8rem;
+  --gap-medium: 1.562rem;
+  --gap-small: 5px;
+  --padding-section: 50px;
+}
+
+/* 2. Seção Mouse */
+.mouse {
   width: 100%;
   height: 24.375rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  gap: 3.125rem;
-
-
-  border: 1px solid red;
+  gap: var(--gap-large);
 }
-.left{
+/* 3. Lado Esquerdo */
+.left {
   width: 38.593rem;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  gap: 1.562rem;
-  padding: 50px;
-  border-radius: 24px;
-  background: #8FFF00;
-
-  border: 1px solid red;
+  gap: var(--gap-medium);
+  padding: var(--padding-section);
+  border-radius: var(--border-radius);
+  background: var(--light-bg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.text-left{
+/* 4. Texto Esquerdo */
+.text-left {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
-
-  gap: 5px;
+  gap: var(--gap-small);
   width: 20.343rem;
   height: 13.875rem;
-
-
-  & p{
-    color: #254300;
-    font-size: 14px;
-    font-weight: 900;
-    line-height: 36px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-  }
-  & h2{
-    color: #000;
-    font-size: 24px;
-    font-weight: 800;
-    line-height: 36px;
-  }
-
-  
-
-  border: 1px solid red;
 }
 
-.right{
+.text-left p {
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-small);
+}
+
+.text-left h2 {
+  color: var(--text-dark);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 36px;
+}
+
+/* 5. Lado Direito */
+.right {
   width: 38.593rem;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  gap: 1.562rem;
-  padding: 50px;
-  border-radius: 24px;
-  background: #111;
-
-  border: 1px solid red;
+  gap: var(--gap-medium);
+  padding: var(--padding-section);
+  border-radius: var(--border-radius);
+  background: var(--dark-bg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-.text-right{
+/* 6. Texto Direito */
+.text-right {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: start;
-  gap: 5px;
+  align-items: flex-start;
+  gap: var(--gap-small);
   width: 20.343rem;
   height: 13.875rem;
+}
 
+.text-right p {
+  color: var(--text-light);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-small);
+}
 
-  & p{
-    color: #fff;
-    font-size: 14px;
-    font-weight: 900;
-    line-height: 36px; 
+.text-right h2 {
+  color: var(--text-light);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 36px;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
+/* 7. Responsividade */
+@media (max-width: 1024px) {
+  .mouse {
+    flex-direction: column;
+    height: auto;
+    gap: var(--gap-medium);
+    padding: 20px;
   }
-  & h2{
-    color: #fff;
-    font-size: 24px;
-    font-weight: 800;
-    line-height: 36px;
+
+  .left,
+  .right {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    min-height: 300px;
   }
+
+  .text-left,
+  .text-right {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .left,
+  .right {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .text-left h2,
+  .text-right h2 {
+    font-size: 20px;
+  }
+
+  .text-left p,
+  .text-right p {
+    font-size: 12px;
+    line-height: 28px;
+  }
+}
 
   
 
-  border: 1px solid red;
-}
-
+  
